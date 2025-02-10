@@ -11,7 +11,6 @@ const valentineScreen = document.getElementById("valentineScreen");
 // Get Valentine buttons
 const yesButton = document.getElementById("yesButton");
 const noButton = document.getElementById("noButton");
-const messageDiv = document.getElementById("message");
 
 // Handle password submission
 submitPassword.addEventListener("click", () => {
@@ -34,7 +33,7 @@ noButton.addEventListener("click", () => {
     yesButton.style.fontSize = `${yesButtonSize}px`;
 });
 
-// Handle "Yes" button click (Show celebration message with GIF & Hearts)
+// Handle "Yes" button click (Show video & make it fullscreen)
 yesButton.addEventListener("click", () => {
     valentineScreen.innerHTML = `
         <h1>HOOORAYYY TUMTUMMM HOOORAY!!</h1>
@@ -49,6 +48,11 @@ yesButton.addEventListener("click", () => {
     `;
 
     playHearts();
+
+    // Make video grow full-screen after 2 seconds
+    setTimeout(() => {
+        document.getElementById("loveVideo").classList.add("fullscreen-video");
+    }, 2000);
 });
 
 // Function to create floating hearts
