@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="passwordScreen" class="container">
+        <h1>Enter the Secret Code</h1>
+        <input type="password" id="passwordInput" placeholder="Hint: Our first chat date">
+        <button id="submitPassword">Enter</button>
+        <p id="passwordMessage"></p>
+    </div>
+
+    <div id="valentineScreen" class="container hidden">
+        <h1>Will You Be My Valentine? ❤️</h1>
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
