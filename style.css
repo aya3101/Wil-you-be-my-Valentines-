@@ -55,6 +55,13 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Begging Cat GIF */
+#beggingCatGif {
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Yes and No Buttons */
 #yesButton {
     font-size: 16px;
