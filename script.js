@@ -41,13 +41,14 @@ yesButton.addEventListener("click", () => {
         <img src="https://media.giphy.com/media/Y4bzv6DYbYzy8jDnoW/giphy.gif" 
              alt="Happy Jumping Kitten" 
              width="300">
-        <video id="loveVideo" controls autoplay>
-             <source src="https://drive.google.com/uc?export=download&id=1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe id="loveVideo" width="100%" height="400" 
+            src="https://drive.google.com/file/d/1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV/preview" 
+            allow="autoplay">
+        </iframe>
     `;
 
     playHearts();
+});
 
     // Make video grow full-screen after 2 seconds
     setTimeout(() => {
