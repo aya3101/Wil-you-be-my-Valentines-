@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secret Page</title>
+    <title>Will You Be My Valentine?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="passwordScreen">
-    <input type="text" id="passwordInput" placeholder="Enter password">
-    <button id="submitPassword">Submit</button>
-    <p id="passwordMessage"></p>
-</div>
+    <!-- Password Screen -->
+    <div id="passwordScreen">
+        <h2>Enter the Secret Password</h2>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button id="submitPassword">Submit</button>
+        <p id="passwordMessage"></p>
+    </div>
 
-<div id="valentineScreen" class="hidden">
-    <h1>Will You Be My Valentine?</h1>
-    <button id="yesButton">Yes</button>
-    <button id="noButton">No</button>
-    <div id="message"></div>
-</div>
+    <!-- Valentine Screen (Hidden by default) -->
+    <div id="valentineScreen" class="hidden">
+        <h1>Will You Be My Valentine?</h1>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
