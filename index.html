@@ -8,22 +8,19 @@
 </head>
 <body>
 
-    <div id="passwordScreen" class="container">
-        <h1>Enter the Secret Code</h1>
-        <input type="password" id="passwordInput" placeholder="Hint: Our first chat date">
-        <button id="submitPassword">Enter</button>
-        <p id="passwordMessage"></p>
-    </div>
+    <!-- Password Screen -->
+<div id="passwordScreen">
+    <input type="text" id="passwordInput" placeholder="Enter password">
+    <button id="submitPassword">Submit</button>
+    <p id="passwordMessage"></p>
+</div>
 
-    <div id="valentineScreen" class="container hidden">
-        <h1>Will You Be My Valentine? ❤️</h1>
-        <div class="buttons">
-            <button id="yesBtn">Yes</button>
-            <button id="noBtn">No</button>
-        </div>
-        <p id="response"></p>
-    </div>
+<!-- Valentine Screen (Initially Hidden) -->
+<div id="valentineScreen" class="hidden">
+    <h1>Will You Be My Valentine?</h1>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+    <div id="message"></div>
+</div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+<script src="script.js"></script>
