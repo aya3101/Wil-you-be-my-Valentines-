@@ -4,7 +4,7 @@ body {
     text-align: center;
     background-color: #ffe6f2; /* Soft pink background */
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
 /* Hide elements until needed */
@@ -95,26 +95,24 @@ img {
     }
 }
 
-/* Video (Starts Small, then Expands to Fullscreen) */
-video {
-    width: 80%;
-    max-width: 600px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    transition: all 1s ease-in-out;
-}
-
-/* Fullscreen Video Effect */
-.fullscreen-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+/* Fullscreen Video */
+#videoContainer {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 100;
+}
+
+#loveVideo {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Fade-in Animation */
