@@ -1,62 +1,84 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: pink;
+    background-color: #ffe6f2; /* Soft pink background */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-.container {
-    margin-top: 50px;
-}
-
+/* Hide elements until needed */
 .hidden {
     display: none;
 }
 
-h1 {
-    font-size: 2em;
+/* Password Screen */
+#passwordScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
 }
 
-.buttons {
-    margin-top: 20px;
+/* Input & Button Styles */
+input {
+    padding: 10px;
+    border: 1px solid #ff66b2;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
-    font-size: 1.5em;
     padding: 10px 20px;
-    margin: 10px;
     border: none;
+    background: #ff66b2; /* Cute pink */
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-#yesBtn {
-    background-color: red;
-    color: white;
+button:hover {
+    background: #ff3385;
 }
 
-#noBtn {
-    background-color: gray;
-    color: white;
-    position: absolute;
-}
-.hidden {
-    display: none;
+/* Valentine Message */
+#valentineScreen h1 {
+    font-size: 28px;
+    color: #ff3385;
+    margin-top: 20px;
 }
 
-video {
-    width: 80%;
-    max-width: 600px;
-    display: block;
-    margin: 20px auto;
+/* Yes and No Buttons */
+#yesButton {
+    font-size: 16px;
+}
+
+#noButton {
+    background: #ff9999;
+}
+
+#noButton:hover {
+    background: #ff6666;
+}
+
+/* Happy GIF */
+img {
+    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Floating Hearts Animation */
 .heart {
     position: fixed;
     bottom: 0;
-    left: 50%;
     font-size: 24px;
     color: red;
     animation: floatUp 5s ease-in infinite;
@@ -71,4 +93,52 @@ video {
         transform: translateY(-100vh);
         opacity: 0;
     }
+}
+
+/* Video (Starts Small, then Expands to Fullscreen) */
+video {
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+}
+
+/* Fullscreen Video Effect */
+.fullscreen-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Celebration Animation (Bounce Effect) */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1, p {
+    animation: bounce 1s infinite alternate;
 }
