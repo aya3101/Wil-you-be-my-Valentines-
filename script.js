@@ -34,7 +34,13 @@ noButton.addEventListener("click", () => {
     yesButton.style.fontSize = `${yesButtonSize}px`;
 });
 
-// Handle "Yes" button click (Show celebration message)
+// Handle "Yes" button click (Show celebration message with GIF)
 yesButton.addEventListener("click", () => {
-    valentineScreen.innerHTML = "<h1>HOOORAYYY TUMTUMMM HOOORAY!!</h1><p>You are the sweetest! ❤️</p>";
+    valentineScreen.innerHTML = `
+        <h1>HOOORAYYY TUMTUMMM HOOORAY!!</h1>
+        <p>You are the sweetest! ❤️</p>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJpNjJ3aGNsbHJxZG0za3lyNWh2YmNtcDY4cHE5c3h6ZGV5eDd5dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VbnUQpnihPSIgIXuZv/giphy.gif" 
+             alt="Happy Jumping Cat" 
+             width="300">
+    `;
 });
