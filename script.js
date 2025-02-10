@@ -33,7 +33,7 @@ noButton.addEventListener("click", () => {
     yesButton.style.fontSize = `${yesButtonSize}px`;
 });
 
-// Handle "Yes" button click (Show video & make it fullscreen)
+// Handle "Yes" button click (Show video & GIF)
 yesButton.addEventListener("click", () => {
     valentineScreen.innerHTML = `
         <h1>HOOORAYYY TUMTUMMM HOOORAY!!</h1>
@@ -41,6 +41,8 @@ yesButton.addEventListener("click", () => {
         <img src="https://media.giphy.com/media/Y4bzv6DYbYzy8jDnoW/giphy.gif" 
              alt="Happy Jumping Kitten" 
              width="300">
+             
+        <!-- Google Drive Video Embed -->
         <iframe id="loveVideo" width="100%" height="400" 
             src="https://drive.google.com/file/d/1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV/preview" 
             allow="autoplay">
@@ -48,12 +50,6 @@ yesButton.addEventListener("click", () => {
     `;
 
     playHearts();
-});
-
-    // Make video grow full-screen after 2 seconds
-    setTimeout(() => {
-        document.getElementById("loveVideo").classList.add("fullscreen-video");
-    }, 2000);
 });
 
 // Function to create floating hearts
