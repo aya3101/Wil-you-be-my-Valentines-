@@ -42,7 +42,7 @@ yesButton.addEventListener("click", () => {
              alt="Happy Jumping Kitten" 
              width="300">
         <video id="loveVideo" controls autoplay>
-            <source src="YOUR_VIDEO_FILE_URL_HERE" type="video/mp4">
+            <source src="https://drive.google.com/file/d/1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV/view?usp=drive_link" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     `;
