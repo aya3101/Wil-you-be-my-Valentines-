@@ -42,13 +42,13 @@ yesButton.addEventListener("click", () => {
         <img src="https://media.giphy.com/media/Y4bzv6DYbYzy8jDnoW/giphy.gif" 
              alt="Happy Jumping Kitten" 
              width="300">
-        <audio id="bgMusic" autoplay loop>
-            <source src="YOUR_AUDIO_FILE_URL_HERE" type="audio/mp3">
-        </audio>
+        <video id="loveVideo" controls autoplay>
+            <source src="YOUR_VIDEO_FILE_URL_HERE" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     `;
 
     playHearts();
-    playMusic();
 });
 
 // Function to create floating hearts
@@ -64,12 +64,4 @@ function playHearts() {
             heart.remove();
         }, 5000);
     }, 200);
-}
-
-// Function to play music
-function playMusic() {
-    const music = document.getElementById("bgMusic");
-    if (music) {
-        music.play().catch((error) => console.log("Music autoplay blocked:", error));
-    }
 }
