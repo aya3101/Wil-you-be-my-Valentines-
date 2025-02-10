@@ -16,8 +16,6 @@ const noButton = document.getElementById("noButton");
 submitPassword.addEventListener("click", () => {
     let enteredPassword = passwordInput.value.trim();
 
-    console.log("Entered Password:", enteredPassword); // Debugging log
-
     if (enteredPassword === correctPassword) {
         passwordScreen.classList.add("hidden"); // Hide password screen
         valentineScreen.classList.remove("hidden"); // Show main screen
@@ -41,12 +39,14 @@ yesButton.addEventListener("click", () => {
         <img src="https://media.giphy.com/media/Y4bzv6DYbYzy8jDnoW/giphy.gif" 
              alt="Happy Jumping Kitten" 
              width="300">
-             
-        <!-- Google Drive Video Embed -->
-        <iframe id="loveVideo" width="100%" height="400" 
-            src="https://drive.google.com/file/d/1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV/preview" 
-            allow="autoplay">
-        </iframe>
+
+        <!-- Google Drive Video Embed (Fullscreen) -->
+        <div id="videoContainer">
+            <iframe id="loveVideo" 
+                src="https://drive.google.com/file/d/1eSnqZDXOLcSR6zZ4uv5pRTxxsJ4oEEQV/preview" 
+                allow="autoplay">
+            </iframe>
+        </div>
     `;
 
     playHearts();
