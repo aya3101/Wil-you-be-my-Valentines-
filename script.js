@@ -1,4 +1,4 @@
-const correctPassword = "9-23-2023";  
+const correctPassword = "2023-09-23";  // Change this to your actual first chat date
 const passwordScreen = document.getElementById("passwordScreen");
 const valentineScreen = document.getElementById("valentineScreen");
 const passwordInput = document.getElementById("passwordInput");
@@ -13,7 +13,7 @@ let yesBtnSize = 1;
 
 // Password Check
 submitPassword.addEventListener("click", () => {
-    if (passwordInput.value === 9-23-2023) {
+    if (passwordInput.value === correctPassword) {
         passwordScreen.classList.add("hidden");
         valentineScreen.classList.remove("hidden");
     } else {
