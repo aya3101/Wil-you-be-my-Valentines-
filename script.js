@@ -1,4 +1,4 @@
-const correctPassword = "2025-01-28";  // Change this to your actual first chat date
+const correctPassword = "September 23 2023";  // Change this to your actual first chat date
 const passwordScreen = document.getElementById("passwordScreen");
 const valentineScreen = document.getElementById("valentineScreen");
 const passwordInput = document.getElementById("passwordInput");
