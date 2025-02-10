@@ -13,7 +13,7 @@ let yesBtnSize = 1;
 
 // Password Check
 submitPassword.addEventListener("click", () => {
-    if (passwordInput.value === correctPassword) {
+    if (passwordInput.value === 9-23-2023) {
         passwordScreen.classList.add("hidden");
         valentineScreen.classList.remove("hidden");
     } else {
