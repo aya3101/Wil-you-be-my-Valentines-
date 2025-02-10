@@ -1,24 +1,40 @@
-// Define the correct password
+// Correct password
 const correctPassword = "2023-09-23";
 
-// Get elements from HTML
+// Get password-related elements
 const passwordInput = document.getElementById("passwordInput");
 const submitPassword = document.getElementById("submitPassword");
+const passwordMessage = document.getElementById("passwordMessage");
 const passwordScreen = document.getElementById("passwordScreen");
 const valentineScreen = document.getElementById("valentineScreen");
-const passwordMessage = document.getElementById("passwordMessage");
 
-// Add event listener for button click
+// Get Valentine buttons
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
+const messageDiv = document.getElementById("message");
+
+// Handle password submission
 submitPassword.addEventListener("click", () => {
-    let enteredPassword = passwordInput.value.trim(); // Remove extra spaces
-    console.log("Entered Password:", enteredPassword); // Debugging line
+    let enteredPassword = passwordInput.value.trim();
+
+    console.log("Entered Password:", enteredPassword); // Debugging log
 
     if (enteredPassword === correctPassword) {
-        // Hide password screen and show the Valentine's message
-        passwordScreen.classList.add("hidden");
-        valentineScreen.classList.remove("hidden");
+        passwordScreen.classList.add("hidden"); // Hide password screen
+        valentineScreen.classList.remove("hidden"); // Show main screen
     } else {
-        // Show error message if password is incorrect
-        passwordMessage.innerText = "Wrong password! Try again.";
+        passwordMessage.innerText = "Wrong password! Try again."; // Show error
     }
+});
+
+// Handle "No" button clicks (Make Yes button grow)
+let yesButtonSize = 16;
+noButton.addEventListener("click", () => {
+    yesButtonSize += 5; // Increase size
+    yesButton.style.fontSize = `${yesButtonSize}px`;
+});
+
+// Handle "Yes" button click (Show celebration message)
+yesButton.addEventListener("click", () => {
+    valentineScreen.innerHTML = "<h1>HOOORAYYY TUMTUMMM HOOORAY!!</h1><p>You are the sweetest! ❤️</p>";
 });
